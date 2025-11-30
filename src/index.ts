@@ -11,9 +11,6 @@ async function main() {
     const users = db.collection("users");
     const result = await users.insertOne({ name: "john" });
     console.log("Inserted:", result.insertedId);
-    console.log(process.platform);
-    console.log(process.env.WSL_DISTRO_NAME);
-    console.log(process.env.WSL_INTEROP);
   } catch (err) {
     console.error(err);
   }
